@@ -21,6 +21,6 @@ jobs:
           script: |
             cd ~/forum-api
             git pull origin main
-            npm install --production
+            npm install
             npm run migrate
             pm2 restart forum-api || pm2 start src/app.js --name forum-api
