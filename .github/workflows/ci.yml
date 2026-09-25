@@ -26,6 +26,11 @@ jobs:
           --health-retries 5
 
     env:
+      PGHOST: localhost
+      PGUSER: developer
+      PGDATABASE: forumapi_test
+      PGPASSWORD: supersecretpassword
+      PGPORT: 5432
       PGHOST_TEST: localhost
       PGUSER_TEST: developer
       PGDATABASE_TEST: forumapi_test
@@ -46,6 +51,11 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
+
+      - name: Create .test.env file
+        run: |
+          cp .env.example .test.env
+          sed -i 's/PGDATABASE=forumapi/PGDATABASE=forumapi_test/g' .test.env
 
       - name: Run Code Linter
         run: npm run lint
