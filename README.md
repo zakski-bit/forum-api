@@ -2,6 +2,8 @@
 
 Proyek submission untuk kelas **Menjadi Back-End Developer Expert / Modul CI/CD dan Security** di Dicoding Academy.
 
+- **Live URL (HTTPS):** `https://13-60-225-48.sslip.io`
+
 ---
 
 ## 🚀 Fitur & Kriteria yang Diimplementasikan
